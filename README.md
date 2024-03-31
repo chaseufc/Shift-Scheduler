@@ -14,7 +14,7 @@ Shift-Scheduler is a Python software designed to automate the process of creatin
 
 ## Run the application:
 * Clone the repository
-* Update the template1.xlsx with your preferred schedule, following the provided template (can be any excel file that followws the template)
+* Update the Template.xlsx with your preferred schedule, following the provided template (can be any excel file that followws the template)
 * Run Schedule.py
 * Select the excel file you wish to generate a schedule with.
 * Done!
