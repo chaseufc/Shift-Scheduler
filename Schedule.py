@@ -1,9 +1,9 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget, QFileDialog
 import pandas as pd
-import annealSchedule
+import Anneal
 
-from annealSchedule import Employee
+from Anneal import Employee
 
 class ScheduleApp(QMainWindow):
     def __init__(self):
@@ -142,7 +142,7 @@ class ScheduleApp(QMainWindow):
                     shiftType = row['Shift Type.1']
                 manualShifts[day][employeeName] = (startTime,endTime,shiftType)
         
-        optimal_schedule, optimal_cost, costs, new_employees = annealSchedule.mainProcess(employees, shifts, manualShifts)
+        optimal_schedule, optimal_cost, costs, new_employees = Anneal.mainProcess(employees, shifts, manualShifts)
 
         return optimal_schedule, optimal_cost, costs, new_employees
 
